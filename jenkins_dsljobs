@@ -1,0 +1,18 @@
+#jenkins dsl job that can create dashboard and jobs in it#
+job('test'){
+    steps{
+   shell('echo "hello world"')
+  }
+}
+listView("${VIEW_NAME}") {
+            jobs {
+                names("test")
+            }
+            columns {
+                status()
+                weather()
+                name()
+                lastSuccess()
+                lastFailure()
+        }
+   }
