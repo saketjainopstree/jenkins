@@ -1,0 +1,9 @@
+
+#jenkins job in which we mentions parameters and those parameters will be be view in the job that created in the string portion
+job('DSL1'){
+steps {
+      shell('echo "helloworld1"')
+parameters {
+        stringParam('myParameterName', 'my default stringParam value', 'my description')
+    }
+}}
